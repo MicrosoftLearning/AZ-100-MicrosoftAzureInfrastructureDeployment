@@ -186,7 +186,7 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following command:
 
    ```
-   $osDiskType = (get-azdisk -ResourceGroupNAme $resourceGroup.ResourceGroupName).Sku
+   $osDiskType = (get-azdisk -ResourceGroupNAme $resourceGroup.ResourceGroupName).Sku.Name
    ```
 
    > **Note**: This command sets the values of a variable designating the operating system disk type of the new Azure VM
