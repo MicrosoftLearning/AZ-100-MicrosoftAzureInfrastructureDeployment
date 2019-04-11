@@ -219,7 +219,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the blade of the **az1000402b-vm2** Azure VM. 
 
-1. From the **Overview** pane of the **az1000401-vm2** blade, generate an RDP file and use it to connect to **az1000402b-vm2**.
+1. From the **Overview** pane of the **az1000402b-vm2** blade, generate an RDP file and use it to connect to **az1000402b-vm2**.
 
 1. When prompted, authenticate by specifying the following credentials:
 
@@ -227,7 +227,7 @@ The main tasks for this exercise are as follows:
 
     - Password: **Pa55w.rd1234**
 
-1. Within the Remote Desktop session to **az1000401-vm2**, start a Command Prompt window and run the following: 
+1. Within the Remote Desktop session to **az1000402b-vm2**, start a Command Prompt window and run the following: 
 
    ```
    nslookup az1000402b-vm1.adatum.local
@@ -241,7 +241,7 @@ The main tasks for this exercise are as follows:
    New-AzDnsRecordSet -ResourceGroupName $rg2.ResourceGroupName -Name www -RecordType A -ZoneName adatum.local -Ttl 3600 -DnsRecords (New-AzDnsRecordConfig -IPv4Address "10.104.0.4")
    ```
 
-1. Switch again to the Remote Desktop session to **az1000401-vm2** and run the following from the Command Prompt window: 
+1. Switch again to the Remote Desktop session to **az1000402b-vm2** and run the following from the Command Prompt window: 
 
    ```
    nslookup www.adatum.local
