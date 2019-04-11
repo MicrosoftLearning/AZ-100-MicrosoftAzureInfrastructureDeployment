@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
    ```
    $rg = Get-AzResourceGroup -Name az1000401b-RG
 
-   New-AzPublicIpAddress -ResourceGroupName $rg.ResourceGroupName -Sku Basic -AllocationMethod Dynamic -Name az1000401b-pip -Location $rg.Location
+   New-AzPublicIpAddress -ResourceGroupName $rg.ResourceGroupName -Sku Basic -AllocationMethod Static -Name az1000401b-pip -Location $rg.Location
    ```
 
 1. In the Azure portal, navigate to the **az1000401b-RG** resource group blade.
