@@ -2,15 +2,15 @@
 
 The AZ-100 and AZ-101 certifications are being replaced by a new AZ-103 Microsoft Azure Administrator exam! You can read more about this announcement on Liberty Munson’s blog at https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&Id=375217 
  
-To support the new exam there will be a new AZ-103 GitHub repository, available starting on May 3 2019. At that time, all the AZ-100 and AZ-101 labs in this repository will be moved to the AZ-103 repository. Those labs are being reused in AZ-103 and we would like to maintain only one repository. The AZ-100 and AZ-101 lab numbering system will be retained, so if you are still teaching the AZ-100 or AZ-101  courses you will be able to easily identify the labs. You will also be able to get the latest version of the labs, and submit any issues you find.
+To support the new exam there will be a new AZ-103 GitHub repository, available starting on May 3 2019. At that time, all the AZ-100 and AZ-101 labs in their respective repositories will be moved to the AZ-103 repository. Those labs are being reused in AZ-103 and we would like to maintain only one repository. The AZ-100 and AZ-101 lab numbering system will be retained, so if you are still teaching the AZ-100 or AZ-101  courses you will be able to easily identify the labs. You will also be able to get the latest version of the labs, and submit any issues you find.
 
 **What are we doing?**
 
 *	We are publishing the lab instructions and lab files on GitHub to allow for interaction between the course authors and MCTs. We hope this will help  keep the content current as the Azure platform changes.
 
-*	There is a GitHub repository for the AZ-100, Microsoft Azure Infrastructure Deployment , and AZ-101, Microsoft Azure Integration and Security, courses.
+*	This is a GitHub repository for the AZ-100, Microsoft Azure Infrastructure Deployment course.
 
-*	You can access the repositories at https://github.com/orgs/MicrosoftLearning/dashboard
+*	You can access the repositories from https://github.com/orgs/MicrosoftLearning/dashboard
 
 *	Within each repository there are lab guides in the Markdown format in the Instructions folder. The lab guides in the PDF format are available from the MCT Download Center, however they are not being regularly updated. If appropriate, there are also additional files that are needed to complete the lab within the Allfiles\Labfiles folder. Not every course has corresponding lab files. 
 
@@ -28,7 +28,7 @@ To support the new exam there will be a new AZ-103 GitHub repository, available 
 
 *	If as you are teaching these courses, you identify areas for improvement, please use the Issues tab to provide feedback. We will periodically create new files to incorporate the changes. 
 
-**General comments regarding the AZ-100 and AZ-102 courses**
+**General comments regarding the AZ-100 and AZ-101 courses**
 
 * PowerShell scripts in all labs use the current version of Azure PowerShell Az module
 
