@@ -91,13 +91,13 @@ The main tasks for this exercise are as follows:
 
    > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
+   > **Note**: Do not wait for the deployment to complete before you proceed to the next step.
+   
 1. In the Azure portal, navigate to the **Tags** blade.
 
 1. From the **Tags** blade, display all resources with the **environment** tag set to the value **lab**. Note that only some of the resources deployed in the previous task have this tag assigned.
 
    > **Note**: At this point, only some of the resources have been provisioned, however, you should see at least a few without tags assigned to them.
-
-   > **Note**: Do not wait for the deployment to complete before you proceed to the next step. 
 
 
 #### Task 2: Implement a policy and an initiative that evaluate resource tagging compliance.
@@ -165,8 +165,6 @@ The main tasks for this exercise are as follows:
 
     - Category: **Lab**
 
-    - Policy rule: the existing policy rule with the **effect** set to **audit**, such that the policy definition has the following content:
-
     - POLICIES AND PARAMETERS: **az10001b - Audit tag and its value**
 
         - Tag Name: **environment**
@@ -191,7 +189,7 @@ The main tasks for this exercise are as follows:
 
     - Create a Managed Identity: **unchecked**
 
-1. You will be redirected to the **Policy - Compliance** blade. Note that **COMPLIANCE STATE** is set to **Not started**.
+1. Navigate to the **Policy - Compliance** blade. Note that **COMPLIANCE STATE** is set to either **Not registered** or **Not started**.
 
    > **Note**: On average, it takes about 10 minutes for a compliance scan to start. Rather than waiting for the compliance scan, proceed to the next task. You will review the compliance status later in this exercise.
 
