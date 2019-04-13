@@ -196,7 +196,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Implement a policy that enforces resource tagging compliance.
 
-1. Navigate to the **Policy - Assignments** blade.
+1. Navigate to the **Policy - Definitions** blade.
 
 1. From the **Policy - Definitions** blade, navigate to the **az10001b - Tagging initiative** blade.
 
@@ -257,8 +257,6 @@ The main tasks for this exercise are as follows:
 
 1. You will be presented with the message indicating validation erors. Review the error details, indicating that deployment of resource **az1000102b-vnet1** was disallowed by the policy **Enforce tag and its value** which is included in the **az10001b - Tagging initiative assignment**.
 
-1. Close the **Custom deployment** blade.
-
 1. Navigate to the **Policy - Compliance** blade. Identify the entry in the **COMPLIANCE STATE** column.
 
 1. Navigate to the **az10001b - Tagging initiative assignment** blade and reviwew the summary of the compliance status.
@@ -282,7 +280,7 @@ The main tasks for this exercise are as follows:
 
 1. Delete the custom policy definition named **az10001b - Audit tag and its value** from the initiative.
 
-1. Delete the built-in policy definition named **Enforce tag and its value** from the initiative.
+1. Delete the built-in policy definition named **Enforce tag and its value** from the initiative and save the changes.
 
    > **Note**: At this point, your initiative contains a single policy that automatically remediates tagging non-compliance during deployment of new resources and provides evaluation of compliance status.
 
@@ -290,17 +288,19 @@ The main tasks for this exercise are as follows:
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
-1. In the Cloud Shell pane, run the following command.
+1. In the Cloud Shell pane, run the following commands.
 
    ```
    Get-AzResource -ResourceGroupName 'az1000101b-RG' | ForEach-Object {Set-AzResource -ResourceId $_.ResourceId -Tag @{environment="lab"} -Force }
    ```
 
-   > **Note**: This script assigns the **environment** tag with the value **lab** to each resource in the resource group **az1000101b-RG**, overwriting any already assigned tags.
+   > **Note**: These commands assign the **environment** tag with the value **lab** to each resource in the resource group **az1000101b-RG**, overwriting any already assigned tags.
+   
+   > **Note**: Wait until the commands successfully complete.   
 
 1. In the Azure portal, navigate to the **Tags** blade.
 
-1. From the **Tags** blade, display all resources with the **environment** tag set to the value **lab**. Verify that all resources in both resource groups **az1000102b-RG** and **az1000102b-RG** are listed.
+1. From the **Tags** blade, display all resources with the **environment** tag set to the value **lab**. Verify that all resources in the resource group **az1000101b-RG** are listed.
 
 
 #### Task 6: Evaluate effects of the remediation task on compliance.
@@ -351,7 +351,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Tags** blade.
 
-1. From the **Tags** blade, display all resources with the **environment** tag set to the value **lab**. Note that all the resources deployed in the previous task have this tag assigned.
+1. From the **Tags** blade, display all resources with the **environment** tag set to the value **lab**. Note that all the resources deployed to the resource group **az1000102b-RG** have this tag with the same value automatically assigned.
 
    > **Note**: At this point, only some of the resources have been provisioned, however, you should see that all of them have tags assigned to them.
 
@@ -368,7 +368,7 @@ The main tasks for this exercise are as follows:
 
 ## Exercise 2: Implement Azure resource locks
   
-Estimated Time: 45 minutes
+Estimated Time: 15 minutes
 
 The main tasks for this exercise are as follows:
 
@@ -381,7 +381,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1000101b-RG** resource group blade.
 
-1. From the **az1000101b-RG** resoruce group blade, display the **az1000101b-RG - Locks** blade.
+1. From the **az1000101b-RG** resource group blade, display the **az1000101b-RG - Locks** blade.
 
 1. From the **az1000101b-RG - Locks** blade, add a lock with the following settings:
 
