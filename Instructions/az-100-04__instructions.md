@@ -173,7 +173,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Configure VNet peering for the second virtual network
   
-1. In the Azure portal, navigate to the **az1000401-vnet2** virtual network blade.
+1. In the Azure portal, navigate to the **az1000402-vnet2** virtual network blade.
 
 1. From the **az1000401-vnet2** virtual network blade, display its **Peerings** blade.
 
