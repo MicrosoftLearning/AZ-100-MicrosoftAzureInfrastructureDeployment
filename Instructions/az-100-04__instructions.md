@@ -175,9 +175,9 @@ The main tasks for this exercise are as follows:
   
 1. In the Azure portal, navigate to the **az1000402-vnet2** virtual network blade.
 
-1. From the **az1000401-vnet2** virtual network blade, display its **Peerings** blade.
+1. From the **az1000402-vnet2** virtual network blade, display its **Peerings** blade.
 
-1. From the **az1000401-vnet2 - Peerings** blade, create a VNet peering with the following settings:
+1. From the **az1000402-vnet2 - Peerings** blade, create a VNet peering with the following settings:
 
     - Name: **az1000402-vnet2-to-az1000401-vnet1**
 
