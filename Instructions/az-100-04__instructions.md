@@ -242,7 +242,7 @@ The main tasks for this exercise are as follows:
 
     - Subscription: the name of the Azure subscription you use for this lab
 
-    - Resource group: **az1000402-LabRG**
+    - Resource group: **az1000402-RG**
 
     - Location: the same Azure region in which you created the virtual networks
   
