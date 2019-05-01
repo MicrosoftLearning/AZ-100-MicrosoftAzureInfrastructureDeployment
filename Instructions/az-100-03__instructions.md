@@ -501,9 +501,9 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The update will trigger application of the DSC configration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000303vmss0 - Instances** blade. 
 
-1. Once the upgrade completes, navigate to the **Overview** pane of the **az1000303vmss0** blade. 
+1. Once the upgrade completes, navigate to the **az1000303vmss0-ip** blade. 
 
-1. On the **az1000303vmss0** blade, note the public IP address assigned to **az1000303vmss0**.
+1. On the **az1000303vmss0-ip** blade, note the public IP address assigned to **az1000303vmss0**.
 
 1. Start Microsoft Edge and navigate to the public IP address you identified in the previous step.
 
