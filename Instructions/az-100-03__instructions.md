@@ -255,7 +255,7 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
-    - Virtual Network Name: **az1000301-vnet1**
+    - Virtual Network Name: **az1000301-vnet0**
 
     - Image Publisher: **Canonical**
 
