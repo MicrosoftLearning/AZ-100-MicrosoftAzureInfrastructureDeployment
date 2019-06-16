@@ -139,7 +139,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **az10002bshare1**
 
-    - Quota: none
+    - Quota: leave blank
 
 
 #### Task 2: Prepare Windows Server 2016 for use with Azure File Sync
@@ -181,7 +181,7 @@ The main tasks for this exercise are as follows:
 1. From the Windows PowerShell console, install the latest AzureRM module by running the following:
 
    ```
-   Install-Module -Name AzureRM
+   Install-Module -Name Az -AllowClobber
    ```
 
    > **Note**: When prompted, confirm that you want to proceed with the installation from PSGallery repository.
@@ -262,7 +262,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Install the Azure File Sync Agent.
 
-1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V5_WS2016.msi**.
+1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_WS2016.msi**.
 
 1. Once the download completes, run the Storage Sync Agent Setup wizard with the default settings to install Azure File Sync Agent.
 
