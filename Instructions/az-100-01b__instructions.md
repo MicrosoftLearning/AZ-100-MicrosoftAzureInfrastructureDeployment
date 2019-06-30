@@ -120,7 +120,7 @@ The main tasks for this exercise are as follows:
 
     - Policy rule: the existing policy rule with the **effect** set to **audit**, such that the policy definition has the following content:
 
-   ```
+   ```json
    {
      "mode": "indexed",
      "policyRule": {
@@ -290,7 +290,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands.
 
-   ```
+   ```pwsh
    Get-AzResource -ResourceGroupName 'az1000101b-RG' | ForEach-Object {Set-AzResource -ResourceId $_.ResourceId -Tag @{environment="lab"} -Force }
    ```
 

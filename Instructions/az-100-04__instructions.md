@@ -336,7 +336,7 @@ The main tasks for this exercise are as follows:
 
 1. In the **Windows PowerShell** window, run the following:
 
-   ```
+   ```pwsh
    Test-NetConnection -ComputerName 10.104.0.4 -TraceRoute
    ```
 

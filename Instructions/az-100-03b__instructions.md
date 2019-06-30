@@ -325,7 +325,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to attach one 128 GB disk to each VM instance in the VM scale set:
 
-   ```
+   ```pwsh
    $vmss = Get-AzVmss -ResourceGroupName 'az1000302b-RG' -VMScaleSetName 'az1000302bvmss1'
 
    Add-AzVmssDataDisk -VirtualMachineScaleSet $vmss -CreateOption Empty -Lun 1 -DiskSizeGB 128 -StorageAccountType 'Standard_LRS'
@@ -339,7 +339,7 @@ The main tasks for this exercise are as follows:
  
 1. In the Cloud Shell pane, run the following in order to configure a simple volume on the newly added disk by using Custom Script Extension:
 
-   ```
+   ```pwsh
    $vmss = Get-AzVmss -ResourceGroupName 'az1000302b-RG' -VMScaleSetName 'az1000302bvmss1'
 
    $publicSettings = @{"fileUris" = (,"https://raw.githubusercontent.com/Azure-Samples/compute-automation-configurations/master/prepare_vm_disks.ps1");"commandToExecute" = "powershell -ExecutionPolicy Unrestricted -File prepare_vm_disks.ps1"}
