@@ -125,7 +125,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    $vmName = 'az1000301-vm1'
    $vmSize = 'Standard_DS1_v2'
    ```
@@ -134,7 +134,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $resourceGroup = Get-AzResourceGroup -Name 'az1000301-RG'
    $location = $resourceGroup.Location
    ```
@@ -143,7 +143,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $availabilitySet = Get-AzAvailabilitySet -ResourceGroupName $resourceGroup.ResourceGroupName -Name 'az1000301-avset0'
    $vnet = Get-AzVirtualNetwork -Name 'az1000301-vnet0' -ResourceGroupName $resourceGroup.ResourceGroupName
    $subnetid = (Get-AzVirtualNetworkSubnetConfig -Name 'subnet0' -VirtualNetwork $vnet).Id
@@ -153,7 +153,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $nsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroup.ResourceGroupName -Location $location -Name "$vmName-nsg"
    $pip = New-AzPublicIpAddress -Name "$vmName-ip" -ResourceGroupName $resourceGroup.ResourceGroupName -Location $location -AllocationMethod Dynamic 
    $nic = New-AzNetworkInterface -Name "$($vmName)$(Get-Random)" -ResourceGroupName $resourceGroup.ResourceGroupName -Location $location -SubnetId $subnetid -PublicIpAddressId $pip.Id -NetworkSecurityGroupId $nsg.Id
@@ -165,7 +165,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $adminUsername = 'Student'
    $adminPassword = 'Pa55w.rd1234'
    $adminCreds = New-Object PSCredential $adminUsername, ($adminPassword | ConvertTo-SecureString -AsPlainText -Force)
@@ -175,7 +175,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $publisherName = 'MicrosoftWindowsServer'
    $offerName = 'WindowsServer'
    $skuName = '2016-Datacenter'
@@ -185,7 +185,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    $osDiskType = (Get-AzResource -ResourceGroupName $resourceGroup.ResourceGroupName -ResourceType Microsoft.Compute/disks)[0].Sku.name
    ```
 
@@ -193,7 +193,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $vmConfig = New-AzVMConfig -VMName $vmName -VMSize $vmSize -AvailabilitySetId $availabilitySet.Id
    Add-AzVMNetworkInterface -VM $vmConfig -Id $nic.Id
    Set-AzVMOperatingSystem -VM $vmConfig -Windows -ComputerName $vmName -Credential $adminCreds 
@@ -206,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    New-AzVM -ResourceGroupName $resourceGroup.ResourceGroupName -Location $location -VM $vmConfig
    ```
 
@@ -407,7 +407,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command, substituting the placeholder `<custom-label>` with any string which is likely to be unique and the placeholder `<location-of-az1000301-RG>` with the name of the Azure region in which you created the **az1000301-RG** resource group.
 
-   ```
+   ```pwsh
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location-of-az1000301-RG>'
    ```
 

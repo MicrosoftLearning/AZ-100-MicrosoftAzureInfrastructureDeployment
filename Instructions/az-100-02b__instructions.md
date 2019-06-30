@@ -168,7 +168,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell console, set up a file share by running the following:
 
-   ```
+   ```pwsh
    $directory = New-Item -Type Directory -Path 'S:\az10002bShare'
 
    New-SmbShare -Name $directory.Name -Path $directory.FullName -FullAccess 'Administrators' -ReadAccess Everyone   
@@ -180,7 +180,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell console, install the latest AzureRM module by running the following:
 
-   ```
+   ```pwsh
    Install-Module -Name AzureRM
    ```
 
@@ -191,7 +191,7 @@ The main tasks for this exercise are as follows:
 
 1. Within the RDP session to the Azure VM, from the Windows PowerShell console, install the latest version of Package Management and PowerShellGet by running the following :
 
-   ```
+   ```pwsh
    Install-Module -Name PackageManagement -Repository PSGallery -Force
 
    Install-Module -Name PowerShellGet -Repository PSGallery -Force
@@ -203,13 +203,13 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
-   ```
+   ```pwsh
    Install-Module -Name Az.StorageSync -AllowPrerelease -AllowClobber -Force
    ```
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
-   ```
+   ```pwsh
    Invoke-AzStorageSyncCompatibilityCheck -Path 'S:\az10002bShare'
    ```
 

@@ -168,7 +168,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command, substituting the placeholder `<custom-label>` with any string which is likely to be unique and the placeholder `<location-of-az1000101-RG>` with the name of the Azure region in which you created the **az1000101-RG** resource group.
 
-   ```
+   ```pwsh
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location-of-az1000101-RG>'
    ```
 
@@ -178,11 +178,11 @@ The main tasks for this exercise are as follows:
 
 1. Run these commands:
 
-   ```
+   ```pwsh
    Register-AzResourceProvider –ProviderNamespace Microsoft.Network
    ```
 
-   ```
+   ```pswh
    Register-AzResourceProvider –ProviderNamespace Microsoft.Compute
    ```
 Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Microsoft.Compute resource providers. This is a one-time operation (per subscription) required when using Azure Resource Manager templates to deploy resources managed by these resource providers (if these resource providers have not been yet registered).
